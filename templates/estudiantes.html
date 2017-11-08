@@ -1,0 +1,21 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-balanced">
+        <h1 class="title">Matricula</h1>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="list">
+            <div ng-repeat="estudiante in estudiantes" class="row">
+                <div class="col">
+                    <input type="checkbox" data-checklist-model="curso.estudiantes" data-checklist-value="estudiante">
+                </div>
+                <div class="col">
+                    {{estudiante.apellido}}, {{estudiante.nombre}}
+                </div>
+                <div class="col">
+                    {{estudiante.cedula}}
+                </div>
+            </div>
+            <button class="button button-full button-positive" ng-click="modal.hide()">Escoger</button>
+        </div>
+    </ion-content>
+</ion-modal-view>

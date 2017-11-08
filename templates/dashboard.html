@@ -1,0 +1,33 @@
+<ion-view view-title="<i class='icon ion-university' /> Cursos actuales" hide-back-button="true" cache-view="false">
+  <ion-content>
+	   <div class="padding text-center">
+       <a class="button button-full button-positive icon-left ion-plus" href="/#/app/crear/cursos" >
+            Crear curso
+        </a>    
+       <div class="list card" ng-repeat="curso in courses track by $index">
+
+          <div class="item ">
+            <bold><h2 style="text-transform: uppercase;">Materia: {{curso.materia}}</h2></bold>
+            <p>ID: {{curso._id}}</p>
+          </div>
+
+          <div class="item item-body">
+            <img class="full-image" src="img/cursos.png">
+            <div class="row">
+                <div class="col">
+                    <a class="button button-full button-balanced ion-eye" href="/#/app/actividad/{{curso._id}}" >
+                        &nbsp; Ver
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="button button-full button-positive ion-plus" href="/#/app/crear/actividad/{{curso._id}}" >
+                        &nbsp; Actividad
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+           
+      </div>
+  </ion-content>
+</ion-view>

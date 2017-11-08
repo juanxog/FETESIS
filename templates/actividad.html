@@ -1,0 +1,31 @@
+<ion-view view-title="Actividades">
+    <ion-content>
+        <ion-list>
+            <div class="padding">
+                <div class="list">
+                    <center ng-if="activities.length > 0">
+                        <a class="button button button-balanced ion-eye" href="/#/app/graph/{{activities[0].curso}}">
+                            &nbsp; Generar gráfica &nbsp;
+                        </a>
+                    </center>
+                    <hr/>
+                    <div class="item" ng-repeat="actividad in activities" >
+                        <div class="row">
+                            <div class="col">
+                                {{actividad.nombre}}
+                            </div>
+                            <div class="col" style="text-align:right">
+                                <a class="button button-small button-balanced ion-eye "href="/#/app/actividad/ver/{{actividad._id}}">
+                                    &nbsp; Ver &nbsp;
+                                </a>
+                                <a class="button button-small button-assertive ion-ios-close-outline" >
+                                    &nbsp; Eliminar &nbsp; 
+                                </a>
+                            </div>    
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

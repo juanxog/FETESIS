@@ -1,0 +1,18 @@
+<ion-view view-title="Actividades">
+    <ion-content>
+        <ion-list>
+            <div class="padding">
+                <div class="item" ng-repeat="actividad in activities" >
+                    <h2 style="color:#9A9A9A;">{{actividad.nombre || "Actividad"}}</h2>
+                    <div style="text-align:right;"><img src="../img/book.png" /></div>
+                    <br/>
+                    <h2>INTEGRANTES</h2>
+                    <div style="margin-top:5px;font-weight:bold;" ng-repeat="users in actividad.user" >
+                        {{users.apellido}},{{users.nombre}}
+                    </div>
+                    <div style="text-align:right;margin-top:5px;color:#074D76;font-weight:bold;">Nota: {{actividad.nota}}</div>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

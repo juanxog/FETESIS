@@ -1,0 +1,47 @@
+<ion-view view-title="Actividad">
+  <ion-content>
+    <ion-list>
+      <div class="padding">
+            <div class="padding">
+           <form name="crear" ng-submit="submit(actividad)">
+               <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Nombre de actividad" ng-model="actividad.nombre" readonly>
+                    </label>
+                    <center><h3>Grupos de trabajo</h3></center>
+                    <ion-list show-delete="shouldShowDelete"
+                              show-reorder="shouldShowReorder"
+                              can-swipe="listCanSwipe">
+                      <ion-item ng-repeat="grupos in actividad.grupo" class="item">
+                            <div class="row">
+                                <div class="col">
+                                    <div ng-repeat="grupo in grupos.grupo" >
+                                        <div>
+                                            {{grupo.apellido}} , {{grupo.nombre}}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3>Expectativa <font color="red">{{grupos.exp  | number:2}}</font></h3> 
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label class="item item-input">
+                                        <input type="text" placeholder="Nota" ng-model="grupos.nota">
+                                    </label>
+                                    <span style="color:green;">Efectividad : </span>{{grupos.nota/grupos.exp*100  | number:2}} %
+                                </div>
+                            </div>
+                      </ion-item>
+                    </ion-list>
+                    <button class="button button-full button-positive" type="submit" >
+                        Editar Notas
+                    </button>  
+                </div>
+           
+           </form>
+            
+      </div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

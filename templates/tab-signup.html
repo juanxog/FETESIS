@@ -1,0 +1,50 @@
+<div class="tabs-striped  tabs-background-positive tabs-color-light">
+    <div class="tabs">
+        <a class="tab-item " href="#/app/login"><i class="icon ion-unlocked"></i> Login </a>
+        <a class="tab-item active" href="#/app/signup"> <i class="icon ion-person"></i> Sing Up </a>
+    </div>
+</div>
+
+<ion-view view-title="Sign Up" class="loginBg" hide-nav-bar="true" >
+    <ion-content class="padding">
+        <div class="row responsive-sm padding remvoeBP">
+            <div class="col">
+                <div class="app-logo"><img src="img/logo.png" style="width:90px;"></div>
+                <form name="asdas">
+                    <div class="list list-inset removePM">
+                        <label class="item item-input"><input ng-model="user.nombre" type="text" name="nombre" placeholder="Nombre" required> </label>
+                        <label class="item item-input"><input ng-model="user.apellido" name="apellido"  type="text" placeholder="Apellido" required> </label>
+                        <label class="item item-input"><input ng-model="user.user" name="user"  type="text" placeholder="Usuario" required> </label>
+                        <label class="item item-input"><input ng-model="user.email" name="user"  type="email" placeholder="E-mail" required> </label>
+                        <label class="item item-input"><input ng-model="user.cedula" name="cedula" type="text" placeholder="Cedula" required> </label>
+                        <label class="item item-input"><input ng-model="user.password" name="password" type="password" placeholder="Password" required> </label>
+                        <ion-checkbox ng-model="user.esprofesor" required>
+                            ¿Es profesor?
+                        </ion-checkbox>
+                        <select class="styled-select slate" ng-model="user.type" required>
+                            <option selected value="" disabled>Selecciona tu tipo</option>
+                            <option value="ENFJ">ENFJ</option>
+                            <option value="INFJ">INFJ</option>
+                            <option value="ENFP">ENFP</option>
+                            <option value="INFP">INFP</option>
+                            <option value="INTJ">INTJ</option>
+                            <option value="ENTJ">ENTJ</option>
+                            <option value="INTP">INTP</option>
+                            <option value="ENTP">ENTP</option>
+                            <option value="ESFP">ESFP</option>
+                            <option value="ISFP">ISFP</option>
+                            <option value="ENFJ">ENFJ</option>
+                            <option value="ESFJ">ESFJ</option>
+                            <option value="ISFJ">ISFJ</option>
+                            <option value="ISTP">ISTP</option>
+                            <option value="ESTP">ESTP</option>
+                            <option value="ISTJ">ISTJ</option>
+                            <option value="ESTJ">ESTJ</option>
+                        </select>
+                    </div>
+                    <div class="loginButton" ng-click="register(user)" ><button class="button ion-person button-block button-balanced"> Register </button></div>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

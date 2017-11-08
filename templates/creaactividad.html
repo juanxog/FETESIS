@@ -1,0 +1,39 @@
+<ion-view view-title="Actividad" view-cached=”false” >
+  <ion-content>
+	   <div class="padding">
+            
+           <form name="crear" ng-submit="submit(actividad)">
+               <div class="list">
+                   <center><img src="../img/online-course.svg"  class="img-course"/></center>
+                    <label class="item item-input">
+                        <input type="text" placeholder="Nombre de actividad" ng-model="actividad.nombre" ng-required>
+                    </label>
+                    <a class="button button-full button-positive icon-left ion-android-person-add" ng-click="generar(actividad.curso)" >
+                        Generar grupos
+                    </a> 
+                    <center><h3>Grupos de trabajo</h3></center>
+                    <ion-list show-delete="shouldShowDelete"
+                              show-reorder="shouldShowReorder"
+                              can-swipe="listCanSwipe">
+                      <ion-item ng-repeat="grupos in actividad.grupo track by $index"  class="item-thumbnail-left">
+                            <img src="img/equipos.jpg">
+                            <div ng-repeat="grupo in grupos.students" class="">
+                                <div>
+                                    {{grupo.apellido}} , {{grupo.nombre}}
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Expectativa <font color="red">{{grupos.valor | number:2 }}</font></h3> 
+                            </div>
+                      </ion-item>
+                    </ion-list>
+                    <button class="button button-full button-balanced" type="submit" >
+                        Crear curso
+                    </button>  
+                </div>
+           
+           </form>
+            
+      </div>
+  </ion-content>
+</ion-view>

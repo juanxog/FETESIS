@@ -1,0 +1,38 @@
+<ion-view view-title="Creación" view-cached=”false”>
+    <ion-content>
+        <div class="padding">
+            <center><h2>Creación de cursos</h2>
+                <img src="../img/write-board.svg" class="img-course">
+            </center>
+            <form name="crear" ng-submit="submit(curso)">
+
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Nombre curso" ng-model="curso.nombre" ng-required>
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" placeholder="Tipo de curso" ng-model="curso.type" ng-required>
+                    </label>
+                    <a class="button button-full button-positive icon-left ion-android-person-add" ng-click="openModal()" >
+                        Agregar estudiantes
+                    </a> 
+                    <ion-list show-delete="shouldShowDelete"
+                              show-reorder="shouldShowReorder"
+                              can-swipe="listCanSwipe">
+                        <ion-item ng-repeat="estudiantex in curso.estudiantes" class="item-thumbnail-left">
+                            <img style="width:60px;height:60px;"  src="../img/perfil.png">
+                            <h2 style="font-weight:bold;">{{estudiantex.apellido}},{{estudiantex.nombre}}</h2>
+                            <ion-option-button class="button-assertive"
+                                               ng-click="delete(estudiantex)">
+                                Eliminar
+                            </ion-option-button>
+                        </ion-item>
+                    </ion-list>
+                    <button class="button button-full button-balanced" type="submit" >
+                        Crear curso
+                    </button>  
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

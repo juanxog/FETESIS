@@ -1,0 +1,42 @@
+<ion-view view-title="Actividades">
+    <ion-content>
+        <div class="padding">
+            <h2 class="text-center">Fortalezas y deficiencia por tipología</h2>
+            <canvas id="radar" class="chart chart-radar"
+                    chart-data="data" chart-options="options" chart-labels="labels">
+            </canvas> 
+        </div>
+        <div class="padding">
+            <h2 class="text-center">Fortalezas y deficiencia por grupo</h2>
+            <canvas id="radar" class="chart chart-radar"
+                    chart-data="data_2" chart-options="options" chart-labels="labels_2">
+            </canvas> 
+        </div>
+        <div class="padding text-center">
+            <select class="form-control" ng-change="change()" ng-model="typep" id="tipologia" >
+                <option selected value="" disabled>Selecciona la tipologia a graficar</option>
+                <option value="ENFJ">ENFJ</option>
+                <option value="INFJ">INFJ</option>
+                <option value="ENFP">ENFP</option>
+                <option value="INFP">INFP</option>
+                <option value="INTJ">INTJ</option>
+                <option value="ENTJ">ENTJ</option>
+                <option value="INTP">INTP</option>
+                <option value="ENTP">ENTP</option>
+                <option value="ESFP">ESFP</option>
+                <option value="ISFP">ISFP</option>
+                <option value="ENFJ">ENFJ</option>
+                <option value="ESFJ">ESFJ</option>
+                <option value="ISFJ">ISFJ</option>
+                <option value="ISTP">ISTP</option>
+                <option value="ESTP">ESTP</option>
+                <option value="ISTJ">ISTJ</option>
+                <option value="ESTJ">ESTJ</option>
+            </select>
+            <h2 class="text-center">Fortalezas y deficiencia por tipologia directa</h2>
+            <canvas id="radar" class="chart chart-radar"
+                    chart-data="data_3" chart-options="options" chart-labels="labels_3">
+            </canvas> 
+        </div>
+    </ion-content>
+</ion-view>

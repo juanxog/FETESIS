@@ -1,0 +1,25 @@
+<ion-view view-title="<i class='icon ion-university' /> Cursos matriculados" hide-back-button="true" cache-view="false">
+  <ion-content>
+	   <div class="padding text-center">
+       <div class="list card" ng-repeat="curso in courses track by $index">
+
+          <div class="item ">
+            <bold><h2 style="text-transform: uppercase;">Materia: {{curso.materia}}</h2></bold>
+            <p>ID: {{curso._id}}</p>
+            <p>Profesor:  {{ curso.profesorinfo[0].apellido}},{{ curso.profesorinfo[0].nombre}}</p>
+          </div>
+          <div class="item item-body">
+            <img style="width:200px;" src="img/presentation.png">
+            <div class="row">
+                <div class="col">
+                    <a class="button button-full button-balanced ion-eye" href="/#/app/actividad-estudiante/{{curso._id}}" >
+                        &nbsp; Ver
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+           
+      </div>
+  </ion-content>
+</ion-view>

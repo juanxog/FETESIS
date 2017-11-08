@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+// Font Variables
+$Lato-slab: 'Roboto Slab', serif;   
+$Lato-sans: 'Open Sans', sans-serif;
+
+
+h1 {
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 400;
+}
+
+* {
+
+    font-family: 'Monospaced', sans-serif !important;
+}
+
+
+.loginBg{
+
+    background-image: url(../img/login.jpg);
+    background-size: cover;
+
+}
+
+.app-logo{ max-width:100px; margin:auto; background-repeat:no-repeat;background-position:center;}
+.top-content { padding-top: 10vh;  text-align: center;   }
+.loginButton{ padding-bottom:0px;}
+.remvoeBP{ padding-bottom:0px;}
+.removePM{ margin-top:0px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; }
+
+#menuLinks .list .item{ border-color:#479CF7;}
+#menuLinks .list .item a{ background:#387EF5; color:#fff;}
+
+.cursos-titulo .col {
+
+    font-weight: bold;
+
+}
+
+.cursos .col {
+
+    vertical-align:middle;
+
+}
+
+.app-logo img {
+
+    border-radius: 100%;
+}
+
+
+.styled-select {
+    height: 29px;
+    overflow: hidden;
+    width: 240px;
+}
+
+.styled-select select {
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 268px;
+}
+
+.styled-select.slate {
+    height: 34px;
+    width: 240px;
+    margin: 10px;
+}
+
+.styled-select.slate select {
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 34px;
+    width: 268px;
+}
